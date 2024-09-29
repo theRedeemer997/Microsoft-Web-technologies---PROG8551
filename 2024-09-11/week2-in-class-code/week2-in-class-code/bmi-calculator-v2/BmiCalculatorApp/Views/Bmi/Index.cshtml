@@ -1,0 +1,31 @@
+﻿@model BmiViewModel
+
+<h1>BMI Calculator</h1>
+
+<form asp-controller="Bmi" asp-action="Index" 
+                method="post" enctype="application/x-www-form-urlencoded">
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label asp-for="Weight">Weight (in Kg):</label>
+        <input asp-for="Weight" type="text" />
+    </div>
+
+    <div>
+        <label asp-for="Height">Height (in metres):</label>
+        <input asp-for="Height" type="text" />
+    </div>
+
+    <div>
+        <label asp-for="Bmi">BMI:</label>
+        <input type="text" disabled="disabled" value="@(Model.Bmi?.ToString("0.0"))" />
+    </div>
+
+    <div>
+        <label asp-for="BmiSummary">BMI summary:</label>
+        <input asp-for="BmiSummary" type="text" disabled="disabled" />
+    </div>
+
+    <button type="submit">Calculate</button>
+    <a href="#">Clear</a>
+</form>

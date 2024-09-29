@@ -1,0 +1,37 @@
+﻿@* step 10 *@
+@model BmiViewModel;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <form method="post" asp-action="Index" asp-controller="Bmi">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label for="">Weight (in Kg):</label>
+            <input type="text" asp-for="Weight" />
+        </div>
+        <div>
+            <label for="">Height (in meters):</label>
+            <input type="text" asp-for="Height"/>
+        </div>
+        <div>
+            <label for="">Bmi</label>
+            <input type="text" asp-for="Bmi" disabled />
+        </div>
+        <div>
+            <label for="">Bmi Summary</label>
+            <input type="text" asp-for="BmiSummary" disabled />
+        </div>
+
+        <button type="submit">Calculate</button>
+        <a href="#">Clear</a>
+
+    </form>
+</body>
+</html>

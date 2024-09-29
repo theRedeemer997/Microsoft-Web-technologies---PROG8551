@@ -1,0 +1,56 @@
+1. Static HTML Version:
+"Hello World" text is hard-coded right into an HTML <p> element in the Home/Index Razor View.
+
+Note: try to also run this one from the command-line as well using "dotnet run" from the 
+command-line in the project directory.
+
+2. ViewBag version:
+"Hello World" text declared in the Home controller's (Index action)and is passed off 
+to the Home/Index view by setting it on a "Greeting" property on the ViewBag object
+and the view then reads that property.
+
+Note: remember to run this second project in the solution you will have to set it to 
+the startup project!
+
+3. ViewData version:
+"Hello World" text declared in the Home controller's (Index action)and is passed off 
+to the Home/Index view by adding the greeting as a value to the ViewData dictionary 
+using the string "Greeting" as the key and the view then reads that property.
+
+Question:
+What's the difference between ViewBag and ViewData? They can be used interchangeably 
+and really their only difference is the type of objects they are:
+ViewBag is a "dynamic type" object so Prperties can be added to it at runtime - much
+like a JavaScript object.
+Whereas ViewData is a dictionary object with strings as keys.
+
+Neither of them are very nice to work with and don't offer any niceties in Visual Studio
+like auto-completion as they are weakly typed.
+
+4. HelloWorld-DynamicStringModelVersion:
+This version uses a simple but strongly-typed string to pass data from the controller
+to the View, and in this example it does so dynamically by tweaking the greeting
+according to what time of the day it is.
+
+5. HelloWorld-DynamicStringModelRazorPageVersion:
+Same as the previous version except implemented using the newer Razor Page framework
+for ASP.NET Core (i.e. not the MVC framework)
+
+6. HelloWorld-StringModelWithServiceVersion:
+Effctively the same as version 4 except the "logic" is moved to a separate greeting
+service that is registered with ASP.NET Core's DI container as a singleton service (
+i.e. so only 1 instance gets created) - this is very much in keeping with best practices
+as then your business logic is isolated in a separate unit-testable service.
+
+The steps for this version are as follows:
+i.) Add a folder called Services to the project and in it define an interface IGreetingService with a single method GetGreeting that returns a string
+ii.) To that same folder add a class GreetingService that implements that interface by returning a greeting based on time of day: Good morning/afternoon/evening
+iii.) Declare the model in the Index view to be a string
+iv.) In Program.cs register IGreetingService and GreetingService together as a singleton service.
+v.) Add an IGreetingService to the HomeController's constructor and save it as a private data field.
+vi.) In the Index action method call the greeting service to get a greeting and pass it off to the view.
+vii.) In the view, present the greeting by accessing the model, as with version #4.
+
+As a final step, it can be very informative to add logging calls to the constructors
+of your GreetingService class and your HomeController class to see when the instances
+get created.

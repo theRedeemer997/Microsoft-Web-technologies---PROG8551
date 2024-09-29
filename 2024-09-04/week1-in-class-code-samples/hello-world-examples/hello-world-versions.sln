@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld-StaticHtmlVersion", "HelloWorld-StaticHtmlVersion\HelloWorld-StaticHtmlVersion.csproj", "{0AC19316-619D-4F39-821C-B367AF211B2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld-ViewBagVersion", "HelloWorld-ViewBagVersion\HelloWorld-ViewBagVersion.csproj", "{A42E1F5C-AAC8-487A-88CD-AB3CB6B94588}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld-ViewDataVersion", "HelloWorld-ViewDataVersion\HelloWorld-ViewDataVersion.csproj", "{84D90C04-AF83-4101-836C-FC4C842BE202}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld-DynamicStringModelVersion", "HelloWorld-DynamicStringModelVersion\HelloWorld-DynamicStringModelVersion.csproj", "{87D4DF3C-B48A-4F5B-B433-A5401FF6C90C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld-DynamicStringModelRazorPageVersion", "HelloWorld-DynamicStringModelRazorPageVersion\HelloWorld-DynamicStringModelRazorPageVersion.csproj", "{1F459FBF-FA39-4970-9260-50C1F552277F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld-StringModelWithServiceVersion", "HelloWorld-StringModelWithServiceVersion\HelloWorld-StringModelWithServiceVersion.csproj", "{661EBE85-E127-4C5E-B201-835B28C5F865}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AC19316-619D-4F39-821C-B367AF211B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC19316-619D-4F39-821C-B367AF211B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC19316-619D-4F39-821C-B367AF211B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC19316-619D-4F39-821C-B367AF211B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42E1F5C-AAC8-487A-88CD-AB3CB6B94588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42E1F5C-AAC8-487A-88CD-AB3CB6B94588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42E1F5C-AAC8-487A-88CD-AB3CB6B94588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42E1F5C-AAC8-487A-88CD-AB3CB6B94588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D90C04-AF83-4101-836C-FC4C842BE202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D90C04-AF83-4101-836C-FC4C842BE202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D90C04-AF83-4101-836C-FC4C842BE202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D90C04-AF83-4101-836C-FC4C842BE202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D4DF3C-B48A-4F5B-B433-A5401FF6C90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D4DF3C-B48A-4F5B-B433-A5401FF6C90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D4DF3C-B48A-4F5B-B433-A5401FF6C90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D4DF3C-B48A-4F5B-B433-A5401FF6C90C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F459FBF-FA39-4970-9260-50C1F552277F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F459FBF-FA39-4970-9260-50C1F552277F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F459FBF-FA39-4970-9260-50C1F552277F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F459FBF-FA39-4970-9260-50C1F552277F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661EBE85-E127-4C5E-B201-835B28C5F865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661EBE85-E127-4C5E-B201-835B28C5F865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661EBE85-E127-4C5E-B201-835B28C5F865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661EBE85-E127-4C5E-B201-835B28C5F865}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9526171-E91F-4B32-94C2-5735284DECE8}
+	EndGlobalSection
+EndGlobal

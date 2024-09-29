@@ -1,0 +1,62 @@
+﻿@model AlbumViewModel
+
+@{
+    ViewBag.Title = "Albums View";
+    string albumTemplate = "\"{0}\" by {1} ({2})";
+
+    string baseCssClass = "nav-link";
+    string cssClass = "";
+}
+
+<div class="row">
+    <ul class="nav nav-tabs">
+        @if (Model.activeGenre == "all")
+        {
+            cssClass = baseCssClass + " active";
+        }
+        else
+        {
+            cssClass = baseCssClass;
+        }
+        <li class="nav nav-item">
+            <a class="@cssClass" asp-controller="Albums" asp-action="GetAlbums" asp-route-genre="">All</a>
+        </li>
+        @foreach (string genre in Model.Genres)
+        {
+            @if (Model.activeGenre == genre)
+            {
+                cssClass = baseCssClass + " active";
+            }
+            else
+            {
+                cssClass = baseCssClass;
+            }
+            <li class="nav nav-item">
+                <a class="@cssClass" asp-controller="Albums" asp-action="GetAlbums" asp-route-genre="@genre">@genre</a>
+            </li>
+        }
+    </ul>
+    
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-6 mt-3">
+        @if(Model.Albums.Count()>0)
+        {
+            <ul>
+                @foreach(Album album in Model.Albums)
+                {
+                    <li>@(string.Format(albumTemplate,album.Title,album.Artist, album.Year))</li>                 
+                }
+            </ul>
+            
+        }
+        else
+        {
+            <p>No Albums found</p>
+        }
+    </div>
+    <div class="col-sm-12 col-md-6 mt-3">
+        <h6>@(string.Format(albumTemplate,Model.RandomAlbum.Title,Model.RandomAlbum.Artist,Model.RandomAlbum.Year))</h6>
+        <img src="@Model.RandomAlbum.ImagePath" alt="Album Cover" />
+    </div>
+</div>
